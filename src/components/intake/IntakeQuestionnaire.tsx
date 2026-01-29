@@ -316,7 +316,7 @@ export default function IntakeQuestionnaire() {
 
                     {/* Answer Input */}
                     <div className="ml-9">
-                      {question.type === 'select' && (
+                      {question.type === 'select' && question.options && (
                         <Select
                           value={(answers[question.id] as string) || ''}
                           onChange={(e) => handleAnswer(question.id, e.target.value)}
@@ -327,7 +327,7 @@ export default function IntakeQuestionnaire() {
                         />
                       )}
 
-                      {question.type === 'radio' && (
+                      {question.type === 'radio' && question.options && (
                         <div className="flex flex-wrap gap-3">
                           {question.options.map((option) => (
                             <label
@@ -355,7 +355,7 @@ export default function IntakeQuestionnaire() {
                         </div>
                       )}
 
-                      {question.type === 'multiselect' && (
+                      {question.type === 'multiselect' && question.options && (
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                           {question.options.map((option) => {
                             const selected = ((answers[question.id] as string[]) || []).includes(option);

@@ -249,7 +249,7 @@ export default function ApplicationsList() {
                         {app.licence_type}
                       </Badge>
                       <Badge
-                        variant={getStatusBadgeVariant(app.status) as 'default' | 'gold' | 'success' | 'warning' | 'error' | 'info'}
+                        variant={getStatusBadgeVariant(app.status) as 'default' | 'gold' | 'success' | 'warning' | 'danger' | 'info'}
                         size="sm"
                       >
                         {getStatusIcon(app.status)}

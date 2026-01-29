@@ -203,7 +203,7 @@ export default function NewApplicationWizard() {
                 value={companyNumber}
                 onChange={(e) => setCompanyNumber(e.target.value)}
                 error={errors.companyNumber}
-                helperText="UK Companies House registration number"
+                hint="UK Companies House registration number"
                 required
               />
 

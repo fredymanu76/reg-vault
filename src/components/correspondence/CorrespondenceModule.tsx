@@ -149,7 +149,7 @@ export default function CorrespondenceModule() {
   const getPriorityBadge = (priority: string) => {
     switch (priority) {
       case 'high':
-        return <Badge variant="error" size="sm">High Priority</Badge>;
+        return <Badge variant="danger" size="sm">High Priority</Badge>;
       case 'medium':
         return <Badge variant="warning" size="sm">Medium</Badge>;
       case 'low':
