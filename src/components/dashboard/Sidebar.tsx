@@ -20,6 +20,7 @@ import {
   Shield,
   BookOpen,
   BarChart3,
+  ClipboardList,
 } from 'lucide-react';
 
 interface NavItem {
@@ -33,6 +34,7 @@ const mainNavItems: NavItem[] = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
   { id: 'applications', label: 'Applications', icon: FileText },
   { id: 'intake', label: 'Client Intake', icon: Users },
+  { id: 'fca-forms', label: 'FCA Forms', icon: ClipboardList },
   { id: 'policies', label: 'Policies', icon: FileCheck },
   { id: 'diagrams', label: 'Diagrams', icon: GitBranch },
   { id: 'bundle', label: 'Bundle Pack', icon: Package },

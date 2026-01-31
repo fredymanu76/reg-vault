@@ -12,6 +12,7 @@ import { PoliciesModule } from '@/components/policies';
 import { CorrespondenceModule } from '@/components/correspondence';
 import { BundleBuilder } from '@/components/bundle';
 import { DiagramsModule } from '@/components/diagrams';
+import { FCAFormsModule } from '@/components/fca-forms';
 
 export default function DashboardLayout() {
   const { sidebarOpen, activeModule } = useUIStore();
@@ -24,6 +25,8 @@ export default function DashboardLayout() {
         return <ApplicationsList />;
       case 'intake':
         return <IntakeQuestionnaire />;
+      case 'fca-forms':
+        return <FCAFormsModule />;
       case 'policies':
         return <PoliciesModule />;
       case 'diagrams':
