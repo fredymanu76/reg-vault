@@ -13,6 +13,12 @@ import { CorrespondenceModule } from '@/components/correspondence';
 import { BundleBuilder } from '@/components/bundle';
 import { DiagramsModule } from '@/components/diagrams';
 import { FCAFormsModule } from '@/components/fca-forms';
+// Journey Components
+import { JourneyOrchestrator } from '@/components/journey';
+import { LicenceAdvisor } from '@/components/licence-advisor';
+import { FinancialProjectionsModule } from '@/components/financial-projections';
+import { BusinessPlanGenerator } from '@/components/business-plan';
+import { SmartBundleGenerator } from '@/components/smart-bundle';
 
 export default function DashboardLayout() {
   const { sidebarOpen, activeModule } = useUIStore();
@@ -21,6 +27,14 @@ export default function DashboardLayout() {
     switch (activeModule) {
       case 'dashboard':
         return <DashboardContent />;
+      case 'journey':
+        return <JourneyOrchestrator />;
+      case 'licence-advisor':
+        return <LicenceAdvisor onComplete={() => {}} />;
+      case 'financials':
+        return <FinancialProjectionsModule />;
+      case 'business-plan':
+        return <BusinessPlanGenerator />;
       case 'applications':
         return <ApplicationsList />;
       case 'intake':
@@ -32,7 +46,7 @@ export default function DashboardLayout() {
       case 'diagrams':
         return <DiagramsModule />;
       case 'bundle':
-        return <BundleBuilder />;
+        return <SmartBundleGenerator />;
       case 'correspondence':
         return <CorrespondenceModule />;
       case 'rkb':

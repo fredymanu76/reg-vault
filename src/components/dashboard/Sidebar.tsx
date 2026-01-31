@@ -21,6 +21,10 @@ import {
   BookOpen,
   BarChart3,
   ClipboardList,
+  Compass,
+  Scale,
+  TrendingUp,
+  FileEdit,
 } from 'lucide-react';
 
 interface NavItem {
@@ -32,12 +36,16 @@ interface NavItem {
 
 const mainNavItems: NavItem[] = [
   { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
+  { id: 'journey', label: 'FCA Journey', icon: Compass },
+  { id: 'licence-advisor', label: 'Licence Advisor', icon: Scale },
+  { id: 'financials', label: 'Financials', icon: TrendingUp },
+  { id: 'business-plan', label: 'Business Plan', icon: FileEdit },
   { id: 'applications', label: 'Applications', icon: FileText },
   { id: 'intake', label: 'Client Intake', icon: Users },
   { id: 'fca-forms', label: 'FCA Forms', icon: ClipboardList },
   { id: 'policies', label: 'Policies', icon: FileCheck },
   { id: 'diagrams', label: 'Diagrams', icon: GitBranch },
-  { id: 'bundle', label: 'Bundle Pack', icon: Package },
+  { id: 'bundle', label: 'Smart Bundle', icon: Package },
   { id: 'correspondence', label: 'FCA Correspondence', icon: Mail },
 ];
 
